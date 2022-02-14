@@ -10,7 +10,10 @@ Bikeshare Python/SQL project
 The project is about showing data based on a users input. The data is about personal user information like gender and all information about the rented bicycle.
 
 ### Files used
-Include the files used
+bikeshare.py
+washington.csv
+new_york_city.csv
+chicago.csv
 
 ### Credits
 Udacity Course
