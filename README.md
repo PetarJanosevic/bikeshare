@@ -4,7 +4,7 @@
 Include the date you created this project and README file.
 
 ### Project Title
-Bikeshare Python/SQL project
+Bikeshare Python project
 
 ### Description
 The project is about showing data based on a users input. The data is about personal user information like gender and all information about the rented bicycle.
