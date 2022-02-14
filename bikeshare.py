@@ -16,7 +16,7 @@ def get_filters():
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!\n')
-    # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
+    # TO DO: get user input for city (chicago, new york city, washington) HINT: Use a while loop to handle invalid inputs
     while True:
         city = input("\nWhich city would you like to take a closer look? Chicago, New York City or Washington? \nMake sure to type the city correctly otherwise it won't work.\n")
         if city not in ('New York City', 'Chicago', 'Washington'):
@@ -69,7 +69,7 @@ def load_data(city, month, day):
         df = df[df['month'] == month]
     if day != 'all':
         df = df[df['day_of_week'] == day.title()]
-    
+
     return df
 
 def time_stats(df):
@@ -90,8 +90,8 @@ def time_stats(df):
     df['hour'] = df['Start Time'].dt.hour
     most_common_start_hour = df['hour'].mode()[0]
     print("Most common start hour:", most_common_start_hour)
-    
-    
+
+    #prints how long this function took
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
@@ -114,7 +114,7 @@ def station_stats(df):
     combination_station = df.groupby(['Start Station', 'End Station']).count()
     print("Most frequent used combination of start station and end station trip:", start_station, " & ", end_station)
 
-
+    #prints how long this function took
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
@@ -131,7 +131,7 @@ def trip_duration_stats(df):
     # TO DO: display mean travel time
     print("Mean travel time:", df['Trip Duration'].mean())
 
-
+    #prints how long this function took
     print("\nThis took %s seconds. " % (time.time() - start_time))
     print('-'*40)
 
@@ -172,6 +172,7 @@ def user_stats(df):
     except KeyError:
       print("Most Common Year:\nNo data available for this month.")
 
+    #prints how long this function took
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
@@ -192,8 +193,8 @@ def main():
         while question:
             print(df.iloc[start_loc:start_loc + 5])
             start_loc += 5
-            view_data = input("Do you wish to continue?: yes or no?").lower()
-            if view_data == "no": 
+            view_data = input("Do you wish to continue: yes or no?").lower()
+            if view_data == "no":
                 question = False
                 break
             else:
