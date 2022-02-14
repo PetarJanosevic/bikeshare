@@ -16,4 +16,4 @@ new_york_city.csv
 chicago.csv
 
 ### Credits
-Udacity Course
+Udacity Course "Introduction to Data-Science"
