@@ -91,7 +91,7 @@ def time_stats(df):
     most_common_start_hour = df['hour'].mode()[0]
     print("Most common start hour:", most_common_start_hour)
 
-
+    #prints how long this function took
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
@@ -114,7 +114,7 @@ def station_stats(df):
     combination_station = df.groupby(['Start Station', 'End Station']).count()
     print("Most frequent used combination of start station and end station trip:", start_station, " & ", end_station)
 
-
+    #prints how long this function took
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
@@ -131,7 +131,7 @@ def trip_duration_stats(df):
     # TO DO: display mean travel time
     print("Mean travel time:", df['Trip Duration'].mean())
 
-
+    #prints how long this function took
     print("\nThis took %s seconds. " % (time.time() - start_time))
     print('-'*40)
 
@@ -172,6 +172,7 @@ def user_stats(df):
     except KeyError:
       print("Most Common Year:\nNo data available for this month.")
 
+    #prints how long this function took
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
